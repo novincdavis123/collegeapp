@@ -45,6 +45,8 @@ class HomePage extends StatelessWidget {
     );
   }
 
+//list of boxes
+
   Column _box(BuildContext context) {
     return Column(
       children: [

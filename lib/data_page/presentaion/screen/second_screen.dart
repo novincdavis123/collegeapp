@@ -32,6 +32,8 @@ class CollegeApp extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+//heading boxes
+
           Container(
             height: 50,
             width: double.infinity,
@@ -71,6 +73,9 @@ class CollegeApp extends StatelessWidget {
             color: ColorsModel.lightGrey,
           ),
           _sizedBox(),
+
+//data part
+
           Text.rich(TextSpan(children: [
             TextSpan(
               text:
