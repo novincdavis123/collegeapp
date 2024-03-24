@@ -25,7 +25,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        appBar: _appBar(),
+
+//appBar of the screen
+
+        appBar: const CustomAppBar(),
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(15),
           child: ListView.builder(
@@ -40,10 +43,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
-//appBar of the screen
-
-  CustomAppBar _appBar() => const CustomAppBar();
 
   Column _box(BuildContext context) {
     return Column(

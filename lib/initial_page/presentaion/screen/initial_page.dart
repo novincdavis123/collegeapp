@@ -12,12 +12,17 @@ class FrontPage extends StatelessWidget {
       bottom: false,
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: _appBar(),
+
+//appBar of the screen
+
+        appBar: const CustomAppBar(),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+//x icon for naviagtion to homepage
+
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
@@ -37,24 +42,21 @@ class FrontPage extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height / 3,
               ),
-              const Center(
+
+//centered  main title for app
+
+              Center(
                 child: Text.rich(
                   textAlign: TextAlign.center,
                   TextSpan(
                     children: [
                       TextSpan(
                         text: 'College App',
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black),
+                        style: _textSpan(22),
                       ),
                       TextSpan(
                         text: '\nVersion V1.1',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black),
+                        style: _textSpan(17),
                       )
                     ],
                   ),
@@ -67,7 +69,13 @@ class FrontPage extends StatelessWidget {
     );
   }
 
-//appBar of the screen
+//textspan style
 
-  CustomAppBar _appBar() => const CustomAppBar();
+  TextStyle _textSpan(double fontsize) {
+    return TextStyle(
+      fontSize: fontsize,
+      fontWeight: FontWeight.w400,
+      color: Colors.black,
+    );
+  }
 }
