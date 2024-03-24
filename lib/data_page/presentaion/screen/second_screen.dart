@@ -1,3 +1,4 @@
+import 'package:collegeapp/constants/colors.dart';
 import 'package:collegeapp/constants/links.dart';
 import 'package:collegeapp/functions/website_call.dart';
 import 'package:collegeapp/global/widgets/custom_appbar.dart';
@@ -13,7 +14,7 @@ class CollegeApp extends StatelessWidget {
       top: false,
       bottom: false,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorsModel.baseWhite,
 
 //appBar of the screen
 
@@ -34,7 +35,7 @@ class CollegeApp extends StatelessWidget {
           Container(
             height: 50,
             width: double.infinity,
-            color: const Color(0xffBA1F1F),
+            color: ColorsModel.darkRed,
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: InkWell(
@@ -43,7 +44,7 @@ class CollegeApp extends StatelessWidget {
                   children: [
                     const Text(
                       'Electronics',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: ColorsModel.baseWhite),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10),
@@ -53,7 +54,8 @@ class CollegeApp extends StatelessWidget {
                         },
                         child: const Text(
                           'x',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
+                          style: TextStyle(
+                              fontSize: 20, color: ColorsModel.baseWhite),
                         ),
                       ),
                     )
@@ -66,7 +68,7 @@ class CollegeApp extends StatelessWidget {
           Container(
             height: 150,
             width: double.infinity,
-            color: Colors.grey[400],
+            color: ColorsModel.lightGrey,
           ),
           _sizedBox(),
           Text.rich(TextSpan(children: [
@@ -197,7 +199,7 @@ class CollegeApp extends StatelessWidget {
 //normal text style
 
   TextStyle _defaultStyle() =>
-      const TextStyle(color: Colors.black, fontSize: 22);
+      const TextStyle(color: ColorsModel.baseBlack, fontSize: 22);
 
 //on click function
 
@@ -212,10 +214,10 @@ class CollegeApp extends StatelessWidget {
 
   TextStyle _customSpanStyle() {
     return const TextStyle(
-        color: Colors.black,
+        color: ColorsModel.baseBlack,
         decoration: TextDecoration.underline,
         decorationThickness: 2,
-        decorationColor: Colors.black,
+        decorationColor: ColorsModel.baseBlack,
         fontSize: 22);
   }
 }

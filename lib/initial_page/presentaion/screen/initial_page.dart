@@ -1,3 +1,4 @@
+import 'package:collegeapp/constants/colors.dart';
 import 'package:collegeapp/global/widgets/custom_appbar.dart';
 import 'package:collegeapp/home_page/presentaion/screen/home.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class FrontPage extends StatelessWidget {
       top: false,
       bottom: false,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorsModel.baseWhite,
 
 //appBar of the screen
 
@@ -36,7 +37,7 @@ class FrontPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black),
+                      color: ColorsModel.baseBlack),
                 ),
               ),
               SizedBox(
@@ -75,7 +76,7 @@ class FrontPage extends StatelessWidget {
     return TextStyle(
       fontSize: fontsize,
       fontWeight: FontWeight.w400,
-      color: Colors.black,
+      color: ColorsModel.baseBlack,
     );
   }
 }

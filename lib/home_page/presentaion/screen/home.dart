@@ -1,3 +1,4 @@
+import 'package:collegeapp/constants/colors.dart';
 import 'package:collegeapp/data_page/presentaion/screen/second_screen.dart';
 import 'package:collegeapp/global/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
@@ -11,17 +12,17 @@ class HomePage extends StatelessWidget {
       top: false,
       bottom: false,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorsModel.baseWhite,
         floatingActionButton: InkWell(
           onTap: () {
             Navigator.of(context).pop(context);
           },
           child: const CircleAvatar(
             radius: 30,
-            backgroundColor: Color(0xffBA1F1F),
+            backgroundColor: ColorsModel.darkRed,
             child: Text(
               'i',
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: TextStyle(fontSize: 20, color: ColorsModel.baseWhite),
             ),
           ),
         ),
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
         Container(
           height: 50,
           width: double.infinity,
-          color: const Color(0xffBA1F1F),
+          color: ColorsModel.darkRed,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: InkWell(
@@ -71,11 +72,11 @@ class HomePage extends StatelessWidget {
                 children: [
                   Text(
                     'Electronics',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: ColorsModel.baseWhite),
                   ),
                   Icon(
                     Icons.chevron_right,
-                    color: Colors.white,
+                    color: ColorsModel.baseWhite,
                   )
                 ],
               ),
